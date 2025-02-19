@@ -1,19 +1,3 @@
-// const container = document.querySelector("#container");
-
-// for (let i = 1; i < 17; i++) {
-//     let divHorizontal = document.createElement("div");
-//     divHorizontal.setAttribute("id", `divH${i}`);
-//     divHorizontal.setAttribute("class", "horizontal");
-//     for (let j = 1; j < 17; j++) {
-//         let divCoulmn = document.createElement("div");
-//         divCoulmn.setAttribute("id", `divC${i}Row${j}`);
-//         divCoulmn.setAttribute("class", `column${i} column`);
-//         divHorizontal.appendChild(divCoulmn);
-//     }
-
-//     container.appendChild(divHorizontal);
-// }
-
 const gridContainer = document.querySelector("#gridContainer");
 createGrid();
 addHoverEfecct();
@@ -61,12 +45,11 @@ btn.addEventListener("click", () => {
 function addHoverEfecct() {
   let cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
-    cell.addEventListener("mouseenter", function (e) {
-      e.target.style.backgroundColor = "pink";
-    })
+    cell.addEventListener("mouseenter", function changeColor (e) {
+      let randomColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+      if (!e.target.style.backgroundColor){
+        e.target.style.backgroundColor = randomColor;
+      }
   });
-}
-
-
-
+})}
 

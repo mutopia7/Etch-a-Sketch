@@ -1,0 +1,21 @@
+
+#gridContainer {
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+    height: 960px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex: 1; /* تا هر ردیف به اندازه‌ی مساوی تقسیم شود */
+}
+
+.cell {
+    flex: 1;
+    aspect-ratio: 1; /* این تضمین می‌کند که سلول‌ها مربع باشند */
+    border: 1px solid gray;
+}

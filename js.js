@@ -1,6 +1,6 @@
 const gridContainer = document.querySelector("#gridContainer");
 createGrid();
-addHoverEfecct();
+addHoverEffect();
 
 function createGrid(size = 16) {
   gridContainer.innerHTML = "";
@@ -39,17 +39,19 @@ btn.addEventListener("click", () => {
   }
 
   createGrid(gridSize);
-  addHoverEfecct();
+  addHoverEffect();
 })
 
-function addHoverEfecct() {
+function addHoverEffect() {
   let cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
     cell.addEventListener("mouseenter", function changeColor (e) {
-      let randomColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+      let randomColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}`;
       if (!e.target.style.backgroundColor){
         e.target.style.backgroundColor = randomColor;
-      }
+      } 
   });
 })}
+
+
 

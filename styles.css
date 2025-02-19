@@ -17,5 +17,6 @@
 .cell {
     flex: 1;
     aspect-ratio: 1; /* این تضمین می‌کند که سلول‌ها مربع باشند */
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
+
